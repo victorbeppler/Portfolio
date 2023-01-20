@@ -65,3 +65,6 @@ export const ButtonDownload = styled.button`
 `;
 
 export const Contact = styled.button``;
+export const ButtonDownloadCv = styled.button`
+  
+`;
