@@ -1,7 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  position: absolute;
+  width: 1728px;
+  height: 1009px;
+  left: 0px;
+  top: 108px;
+
   background: var(--dark);
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 export const Header = styled.div`
@@ -64,7 +72,23 @@ export const ButtonDownload = styled.button`
   color: #160f29;
 `;
 
-export const Contact = styled.button``;
+export const ButtonContact = styled.button`
+  position: absolute;
+  width: 160px;
+  height: 50px;
+  left: 439px;
+  top: 308px;
+
+  background: #ffffff;
+  border-radius: 46px;
+`;
 export const ButtonDownloadCv = styled.button`
-  
+  position: absolute;
+  width: 160px;
+  height: 50px;
+  left: 181px;
+  top: 308px;
+
+  background: #ffffff;
+  border-radius: 160px;
 `;

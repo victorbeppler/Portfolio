@@ -1,6 +1,14 @@
 import { React } from "react";
 import GlobalStyles from "../../styles/global-styles";
-import { Container, Header, Menu, Name, Line, Contact ,ButtonDownloadCv} from "./styles.js";
+import {
+  Container,
+  Header,
+  Menu,
+  Name,
+  Line,
+  ButtonContact,
+  ButtonDownloadCv,
+} from "./styles.js";
 import Button from "../../Components/Button";
 // import ButtonDownload from "../../Components/button-download-cv";
 
@@ -19,7 +27,7 @@ export default function home() {
         <Name>Victor Hugo Beppler Pereira</Name>
         <Line />
         <ButtonDownloadCv>Download CV</ButtonDownloadCv>
-        <Contact>Contact</Contact>
+        <ButtonContact>Contact</ButtonContact>
       </Container>
     </>
   );
