@@ -92,3 +92,43 @@ export const ButtonDownloadCv = styled.button`
   background: #ffffff;
   border-radius: 160px;
 `;
+
+export const AbboutMe = styled.div`
+  position: absolute;
+  width: 1398px;
+  height: 363px;
+  left: 165px;
+  top: 568px;
+`;
+
+export const TitleAbboutMe = styled.h2`
+  position: absolute;
+  width: 187px;
+  height: 46px;
+  left: 628px;
+  top: 53px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+
+  color: #ffffff;
+`;
+
+export const TextAbboutMe = styled.p`
+  position: absolute;
+  width: 1311px;
+  height: 178px;
+  left: 66px;
+  top: 146px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+
+  color: #ffffff;
+`;
