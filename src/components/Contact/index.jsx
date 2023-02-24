@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { X } from "phosphor-react";
-import GithubLogo from "../images/GitHub-Mark.png";
-import Linkedin from "../images/Linkedin.png";
+import GithubLogo from "../../images/GitHub-Mark.png";
+import Linkedin from "../../images/Linkedin.png";
 import * as Dialog from "@radix-ui/react-dialog";
 
 import { FaLinkedin, FaGithub } from "react-icons/fa";

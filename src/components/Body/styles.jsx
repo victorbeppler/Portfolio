@@ -62,8 +62,8 @@ export const Button = styled.button`
 `;
 
 export const Image = styled.img`
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   float: right;
   margin: 100px;

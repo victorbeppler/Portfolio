@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ImageProfile from "../images/Perfil.png";
+import ImageProfile from "../../images/Victor.png";
 
 import ContactDialog from "../Contact";
 
