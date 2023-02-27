@@ -24,7 +24,7 @@ function ContactDialog() {
     <Dialog.Root>
       <Dialog.Trigger
         type="button"
-        className="border-2 bg-white text-background py-2 px-4 border-none rounded-lg text-base cursor-pointer transition duration-300 ease-in-out pl-4 pr-4 hover:border-2 hover:bg-background hover:border-primary hover:text-white"
+        className="border border-white bg-white text-background py-2 px-4 rounded-lg text-base cursor-pointer transition duration-300 ease-in-out hover:border-white-300 hover:bg-background  hover:text-white"
       >
         Contato
       </Dialog.Trigger>
