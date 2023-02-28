@@ -3,6 +3,7 @@ import ImageProfile from "../../images/Victor.jpg";
 
 import ContactDialog from "../Contact";
 import Projects from "../Projects";
+import Skills from "../Skills";
 
 import {
   Container,
@@ -16,12 +17,6 @@ import {
   ContainerAbbout,
   TitleAbbout,
   TextAbbout,
-  ContainerSkills,
-  Skill,
-  SkillIcon,
-  SkillText,
-  SkillTitle,
-  SkillWrap,
 } from "./styles.jsx";
 
 function Body() {
@@ -57,51 +52,7 @@ function Body() {
           criando documentações, UML e fluxos BPMN.
         </TextAbbout>
       </ContainerAbbout>
-      <ContainerSkills>
-        <SkillTitle>Habilidades</SkillTitle>
-        <SkillWrap>
-          <Skill>
-            <SkillText>HTML5</SkillText>
-            <SkillIcon src="/skill/html.png" />
-          </Skill>
-          <Skill>
-            <SkillText>CSS</SkillText>
-            <SkillIcon src="/skill/css-3.png" />
-          </Skill>
-          <Skill>
-            <SkillText>Docker</SkillText>
-            <SkillIcon src="/skill/docker.png" />
-          </Skill>
-          <Skill>
-            <SkillText>C#</SkillText>
-            <SkillIcon src="/skill/c-sharp.png" />
-          </Skill>
-          <Skill>
-            <SkillText>MongoDB</SkillText>
-            <SkillIcon src="/skill/mongo.png" />
-          </Skill>
-          <Skill>
-            <SkillText>NodeJs</SkillText>
-            <SkillIcon src="/skill/nodejs.png" />
-          </Skill>
-          <Skill>
-            <SkillText>Postgree</SkillText>
-            <SkillIcon src="/skill/postgree.png" />
-          </Skill>
-          <Skill>
-            <SkillText>React</SkillText>
-            <SkillIcon src="/skill/react.png" />
-          </Skill>
-          <Skill>
-            <SkillText>Tailwind</SkillText>
-            <SkillIcon src="/skill/Tailwind.png" />
-          </Skill>
-          <Skill>
-            <SkillText>Vite</SkillText>
-            <SkillIcon src="/skill/vite.png" />
-          </Skill>
-        </SkillWrap>
-      </ContainerSkills>
+      <Skills />
       <Projects />
     </>
   );
