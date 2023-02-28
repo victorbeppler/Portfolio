@@ -1,10 +1,11 @@
 import React from "react";
 import ImageProfile from "../../images/Victor.jpg";
 
-import ContactDialog from "../Contact";
 import Projects from "../Projects";
 import Skills from "../Skills";
 import Abbout from "../Abbout";
+import ContactDialog from "../Contact";
+
 
 import {
   Container,
