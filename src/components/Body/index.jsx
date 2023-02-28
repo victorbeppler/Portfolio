@@ -53,7 +53,7 @@ function Body() {
           Atualmente venho desenvolvendo o meu espírito de liderança, criando
           integrações entre softwares mais especificamente ERP e CRM, auxiliando
           tanto equipe de desenvolvimento quanto a equipe de consultoria com a
-          visão integrado do negócio, revisando os códigos, dicas de melhorias,
+          visão integrada do negócio, revisando os códigos, dicas de melhorias,
           criando documentações, UML e fluxos BPMN.
         </TextAbbout>
       </ContainerAbbout>
