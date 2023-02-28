@@ -96,34 +96,5 @@ export const DownloadCV = styled.a`
   }
 `;
 
-export const ContainerAbbout = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
 
-export const TitleAbbout = styled.h1`
-  font-size: 1.5rem;
-  width: auto;
-  color: white;
-  border-bottom: 2px solid white;
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
-  text-align: center;
-`;
-
-export const TextAbbout = styled.p`
-  width: 70%;
-  font-size: 1.5rem;
-  color: white;
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
-  text-align: center;
-`;
-
-export const Texto = styled.p`
-  font-size: 24px;
-  font-weight: bold;
-`;
 

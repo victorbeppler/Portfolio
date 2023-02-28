@@ -4,6 +4,7 @@ import ImageProfile from "../../images/Victor.jpg";
 import ContactDialog from "../Contact";
 import Projects from "../Projects";
 import Skills from "../Skills";
+import Abbout from "../Abbout";
 
 import {
   Container,
@@ -14,9 +15,6 @@ import {
   Image,
   ButtonContainer,
   DownloadCV,
-  ContainerAbbout,
-  TitleAbbout,
-  TextAbbout,
 } from "./styles.jsx";
 
 function Body() {
@@ -38,20 +36,7 @@ function Body() {
           </RightColumn>
         </Wrapper>
       </Container>
-      <ContainerAbbout>
-        <TitleAbbout>Sobre mim</TitleAbbout>
-        <TextAbbout>
-          Apaixonado por desenvolvimento desde 2014, ingressei na faculdade
-          visando aprimorar meus conhecimentos e aperfeiçoar o meu
-          relacionamento interpessoal.
-          <br />
-          Atualmente venho desenvolvendo o meu espírito de liderança, criando
-          integrações entre softwares mais especificamente ERP e CRM, auxiliando
-          tanto equipe de desenvolvimento quanto a equipe de consultoria com a
-          visão integrada do negócio, revisando os códigos, dicas de melhorias,
-          criando documentações, UML e fluxos BPMN.
-        </TextAbbout>
-      </ContainerAbbout>
+      <Abbout />
       <Skills />
       <Projects />
     </>
