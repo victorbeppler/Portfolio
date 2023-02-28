@@ -62,8 +62,6 @@ export const Image = styled.img`
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  float: right;
-  margin: 100px;
   margin: 200px;
   padding: 10px;
 `;
