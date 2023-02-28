@@ -5,9 +5,9 @@ import { Container, Button } from "./styles";
 function Header() {
   return (
     <Container>
-      <Button>About me</Button>
-      <Button>Projects</Button>
-      <Button>Contact me</Button>
+      <Button>Sobre mim</Button>
+      <Button>Projetos</Button>
+      <Button>Contato</Button>
     </Container>
   );
 }
