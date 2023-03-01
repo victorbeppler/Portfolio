@@ -1,10 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { X } from "phosphor-react";
 import GithubLogo from "../../images/GitHub-Mark.png";
 import Linkedin from "../../images/Linkedin.png";
 import * as Dialog from "@radix-ui/react-dialog";
 
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { SmtpEnviarEmail } from "../../config/smtp-enviar-email";
 
 import {
   ContactForm,
@@ -16,6 +16,15 @@ import {
 } from "./styles";
 
 function ContactDialog() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    // e.preventDefault();
+    await new SmtpEnviarEmail().executar(name, email, subject, message);
+  };
 
   return (
     <Dialog.Root>
@@ -30,24 +39,50 @@ function ContactDialog() {
         <Dialog.Overlay className="w-screen h-screen bg-black/25 fixed inset-0" />
 
         <Dialog.Content
-          className="absolute p-10 bg-zinc-600 rounded-2xl w-full max-w-md top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="absolute p-10 bg-background border rounded-2xl w-full max-w-md top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           style={{
             position: "fixed",
             margin: "auto",
             transition: "transform 300ms ease",
           }}
         >
-          <Dialog.Close className="absolute right-6 top-6 text-red-600 rounded-lg hover:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zinc-900">
+          <Dialog.Close className="absolute right-6 top-6 border border-red-700 text-red-700 rounded-lg hover:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zinc-900">
             <X size={24} aria-label="Fechar" />
           </Dialog.Close>
           <Dialog.Title className="text-3xl leading-tight font-extrabold text-primary py-4">
             Formulário para contato
           </Dialog.Title>
           <ContactForm>
-            <Input type="text" placeholder="Nome" required />
-            <Input type="email" placeholder="Email" required />
-            <TextArea placeholder="Mensagem" required />
-            <Button type="submit">Enviar</Button>
+            <Input
+              type="text"
+              placeholder="Nome"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <Input
+              type="email"
+              placeholder="Email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <Input
+              type="text"
+              placeholder="Assunto"
+              required
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+            />
+            <TextArea
+              placeholder="Mensagem"
+              required
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
+            <Button type="submit" onClick={handleSubmit}>
+              Enviar
+            </Button>
           </ContactForm>
           <div
             style={{
@@ -55,7 +90,7 @@ function ContactDialog() {
               gap: "1rem",
               alignItems: "center",
               justifyContent: "center",
-              padding: "2rem",
+              paddingTop: "2rem",
             }}
           >
             <a
