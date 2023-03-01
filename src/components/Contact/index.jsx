@@ -3,8 +3,7 @@ import { X } from "phosphor-react";
 import GithubLogo from "../../images/GitHub-Mark.png";
 import Linkedin from "../../images/Linkedin.png";
 import * as Dialog from "@radix-ui/react-dialog";
-
-import { SmtpEnviarEmail } from "../../config/smtp-enviar-email";
+import axios from "axios";
 
 import {
   ContactForm,
@@ -21,9 +20,20 @@ function ContactDialog() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = async (e) => {
-    // e.preventDefault();
-    await new SmtpEnviarEmail().executar(name, email, subject, message);
+  const handleSendMail = async (event) => {
+    event.preventDefault();
+    const response = await axios.post("http://localhost:3333/sendMail", {
+      name,
+      email,
+      subject,
+      message,
+    });
+    if (response.status === 200) {
+      alert("Email enviado com sucesso!");
+    } else {
+      alert("Erro ao enviar email!");
+    }
+    // sendMail(email, name, subject, message);
   };
 
   return (
@@ -80,7 +90,7 @@ function ContactDialog() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
-            <Button type="submit" onClick={handleSubmit}>
+            <Button type="submit" onClick={handleSendMail}>
               Enviar
             </Button>
           </ContactForm>
